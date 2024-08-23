@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+      .nav-link.active,
+      .nav-link:focus,
+      .nav-link:hover {
+          color: #ff69b4; /* Warna pink */
+          text-shadow: 0 0 8px rgba(255, 105, 180, 0.8); /* Efek menyala */
+          transition: color 0.3s ease, text-shadow 0.3s ease;
+      }
+  </style>
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Jesica Beauty Studio</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom shadow-sm fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Jesica Beauty Studio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">Tentang kami</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Layanan Kami</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Kontak</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          var navLinks = document.querySelectorAll('.nav-link');
+
+          navLinks.forEach(function(link) {
+              link.addEventListener('click', function() {
+                  // Menghapus kelas 'active' dari semua tautan
+                  navLinks.forEach(function(link) {
+                      link.classList.remove('active');
+                  });
+                  
+                  // Menambahkan kelas 'active' ke tautan yang diklik
+                  this.classList.add('active');
+              });
+          });
+      });
+  </script>
+    <!-- Akhir Navbar -->
+
+    <!-- Jumbotron -->
+    <section class="jumbotron text-center">
+      <img src="img/logo.png" alt="Thendy Rhenaldy" width="300" class="rounded-circle img-thumbnail">
+      <h1 class="display-4 fw-bold">Jesica Beauty Studio</h1>
+      <p class="lead fst-italic fw-bold">
+        NAIL ART | EYELASH | SULAM | INFUS WHITENING
+      </p>
+      <p>Jl. Perkutut I, RT.001/RW.006, Neglasari, Kec. Neglasari, Kota Tangerang, Banten 15129</p>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,192L40,165.3C80,
+        139,160,85,240,96C320,107,400,181,480,208C560,235,640,213,720,181.3C800,149,880,107,960,85.3C1040,64,1120,64,1200,
+        53.3C1280,43,1360,21,1400,10.7L1440,0L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,
+        320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+    </section>
+    <!-- Akhir Jumbotron -->
+
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2 class="fw-bold">Tentang Kami</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center fs-5 text-center">
+          <!-- kolom untuk gambar -->
+          <div class="col-md-6 text-center mb-3">
+            <img src="img/jesica1.png" alt="Owner Photo" class="img-fluid rounded-circle" style="max-width: 50%; height: auto;">
+            <h1 class="fw-bold">Jesica Louisa</h1>
+            <h5 class="fst-italic">Owner</h5>
+            <p class="fst-italic">"Kecantikanmu, ekspresi terbaik dari dirimu."</p>
+          </div>
+          <!-- kolom untuk teks -->
+          <div class="col-md-6">
+            <p>Jesica Beauty Studio hadir sebagai pilihan utama Anda untuk layanan kecantikan yang berkualitas tinggi. 
+              Kami berfokus pada keahlian dalam Nail Art, ekstensi Eyelash, dan perawatan Infus Whitening yang dirancang untuk 
+              menonjolkan kecantikan alami Anda dan meningkatkan rasa percaya diri.
+
+              Kami bangga dengan tim profesional kami yang berdedikasi untuk memberikan layanan terbaik yang disesuaikan dengan 
+              kebutuhan setiap klien. Baik Anda mencari desain kuku yang elegan, bulu mata yang mempesona, atau perawatan kulit 
+              yang menyegarkan, Jesica Beauty Studio siap membantu Anda meraih penampilan terbaik.
+              
+              Di studio kami, Anda akan menemukan suasana yang nyaman dan ramah, di mana Anda bisa bersantai sambil 
+              menikmati perawatan kecantikan terbaik. Kami hanya menggunakan produk berkualitas tinggi dan teknik modern untuk
+              memastikan hasil yang memuaskan setiap kali Anda datang.
+              
+              Datanglah ke Jesica Beauty Studio dan rasakan kombinasi sempurna antara seni dan perawatan kecantikan  
+              di setiap layanan yang kami tawarkan.</p>
+          </div>
+          <!-- <div class="col-md-4">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Culpa quidem nobis ea? Suscipit, aliquam perspiciatis eius quisquam sunt 
+              corrupti atque sed modi eos, omnis ipsam?</p>
+          </div> -->
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fbe3e3" fill-opacity="1" d="M0,0L40,37.3C80,75,160,149,240,165.3C320,181,400,139,480,106.7C560,75,640,53,720,58.7C800,64,880,96,960,101.3C1040,107,1120,85,1200,64C1280,43,1360,21,1400,10.7L1440,0L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,
+        320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+    </section>
+    <!-- Akhir About -->
+
+    <!-- Project -->
+    <section id="projects">
+      <div class="container">
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2 class="fw-bold">Layanan Kami</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="img/Nailart.jpg" class="card-img-top" alt="Projects 1">
+              <div class="card-body">
+                <h2>Nail Art</h2>
+                <p class="card-text text-justify">Di Jesica Beauty Studio, kami percaya bahwa setiap detail kecil dapat membuat perbedaan besar. 
+                  Layanan Nail Art kami dirancang untuk memberikan sentuhan seni pada kuku Anda, menciptakan tampilan yang unik dan penuh 
+                  gaya sesuai dengan kepribadian Anda. Mulai dari desain minimalis hingga pola yang lebih rumit, tim profesional kami siap 
+                  untuk mewujudkan imajinasi Anda menjadi kenyataan.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="img/Eyelash.jpg" class="card-img-top" alt="Projects 2">
+              <div class="card-body">
+                <h2>Eyelash</h2>
+                <p class="card-text text-justify">Ingin memiliki bulu mata yang panjang, tebal, dan alami? Layanan Eyelash di Jesica Beauty Studio 
+                  hadir untuk memberikan hasil yang sempurna sesuai dengan keinginan Anda. Dengan teknik aplikasi yang presisi dan 
+                  produk berkualitas tinggi, kami memastikan bahwa bulu mata Anda akan terlihat indah dan tetap nyaman.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="img/Infuswhitening.jpg" class="card-img-top" alt="Projects 3">
+              <div class="card-body">
+                <h2>Infus Whitening</h2>
+                <p class="card-text text-justify">Cerah dan bercahaya dari dalam dengan layanan Infus Whitening di Jesica Beauty Studio. 
+                  Perawatan ini dirancang untuk mencerahkan kulit secara menyeluruh, memberikan hasil yang lebih cepat dan 
+                  merata dibandingkan metode tradisional. Infus Whitening bekerja dengan menutrisi kulit dari dalam, membantu 
+                  mengurangi hiperpigmentasi, dan meningkatkan elastisitas kulit.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="img/Sulamalis.jpg" class="card-img-top" alt="Projects 4">
+              <div class="card-body">
+                <h2>Sulam Alis</h2>
+                <p class="card-text text-justify">Tampil lebih percaya diri dengan alis yang sempurna melalui layanan Sulam Alis di Jesica Beauty Studio. 
+                  Proses sulam alis kami dirancang untuk menciptakan bentuk alis yang indah dan natural, disesuaikan dengan struktur wajah Anda. 
+                  Menggunakan teknik terkini dan bahan berkualitas, kami menjamin hasil yang tahan lama dengan tampilan yang halus dan rapi.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="img/Sulambibir.jpg" class="card-img-top" alt="Projects 5">
+              <div class="card-body">
+                <h2>Sulam Bibir</h2>
+                <p class="card-text text-justify">Miliki bibir yang selalu tampak segar dan merona alami dengan layanan Sulam Bibir di Jesica Beauty Studio. 
+                  Prosedur ini dirancang untuk memberikan warna yang natural dan tahan lama, sehingga Anda bisa tampil cantik tanpa perlu 
+                  menggunakan lipstik setiap hari. Dengan teknik sulam yang presisi dan aman, warna bibir Anda akan terlihat lebih hidup, 
+                  simetris, dan penuh.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,288L26.7,261.3C53.3,235,107,181,160,138.7C213.3,96,267,64,320,42.7C373.3,21,427,11,480,37.3C533.3,64,587,128,640,138.7C693.3,149,747,107,800,96C853.3,85,907,107,960,101.3C1013.3,96,1067,64,1120,74.7C1173.3,85,1227,139,1280,160C1333.3,181,1387,171,1413,165.3L1440,160L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,
+        320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path></svg>
+    </section>
+    <!-- Akhir Project -->
+
+    <!-- Portfolio -->
+    <section id="Portfolio">
+      <div class="container">
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2 class="fw-bold">Pelanggan Kami</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-4 mb-3">
+            <!-- <img src="img/Nailart.jpg" class="rounded float-start" alt="...">
+            <img src="..." class="rounded float-end" alt="..."> -->
+            <div class="card">
+              <img src="img/Nailart.jpg" class="card-img-top" alt="Projects 1">
+              <div class="card-body">
+                <h2>Nail Art</h2>
+                <p class="card-text text-justify">Di Jesica Beauty Studio, kami percaya bahwa setiap detail kecil dapat membuat perbedaan besar. 
+                  Layanan Nail Art kami dirancang untuk memberikan sentuhan seni pada kuku Anda, menciptakan tampilan yang unik dan penuh 
+                  gaya sesuai dengan kepribadian Anda. Mulai dari desain minimalis hingga pola yang lebih rumit, tim profesional kami siap 
+                  untuk mewujudkan imajinasi Anda menjadi kenyataan.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="img/Eyelash.jpg" class="card-img-top" alt="Projects 2">
+              <div class="card-body">
+                <h2>Eyelash</h2>
+                <p class="card-text text-justify">Ingin memiliki bulu mata yang panjang, tebal, dan alami? Layanan Eyelash di Jesica Beauty Studio 
+                  hadir untuk memberikan hasil yang sempurna sesuai dengan keinginan Anda. Dengan teknik aplikasi yang presisi dan 
+                  produk berkualitas tinggi, kami memastikan bahwa bulu mata Anda akan terlihat indah dan tetap nyaman.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="img/Infuswhitening.jpg" class="card-img-top" alt="Projects 3">
+              <div class="card-body">
+                <h2>Infus Whitening</h2>
+                <p class="card-text text-justify">Cerah dan bercahaya dari dalam dengan layanan Infus Whitening di Jesica Beauty Studio. 
+                  Perawatan ini dirancang untuk mencerahkan kulit secara menyeluruh, memberikan hasil yang lebih cepat dan 
+                  merata dibandingkan metode tradisional. Infus Whitening bekerja dengan menutrisi kulit dari dalam, membantu 
+                  mengurangi hiperpigmentasi, dan meningkatkan elastisitas kulit.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="img/Sulamalis.jpg" class="card-img-top" alt="Projects 4">
+              <div class="card-body">
+                <h2>Sulam Alis</h2>
+                <p class="card-text text-justify">Tampil lebih percaya diri dengan alis yang sempurna melalui layanan Sulam Alis di Jesica Beauty Studio. 
+                  Proses sulam alis kami dirancang untuk menciptakan bentuk alis yang indah dan natural, disesuaikan dengan struktur wajah Anda. 
+                  Menggunakan teknik terkini dan bahan berkualitas, kami menjamin hasil yang tahan lama dengan tampilan yang halus dan rapi.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="img/Sulambibir.jpg" class="card-img-top" alt="Projects 5">
+              <div class="card-body">
+                <h2>Sulam Bibir</h2>
+                <p class="card-text text-justify">Miliki bibir yang selalu tampak segar dan merona alami dengan layanan Sulam Bibir di Jesica Beauty Studio. 
+                  Prosedur ini dirancang untuk memberikan warna yang natural dan tahan lama, sehingga Anda bisa tampil cantik tanpa perlu 
+                  menggunakan lipstik setiap hari. Dengan teknik sulam yang presisi dan aman, warna bibir Anda akan terlihat lebih hidup, 
+                  simetris, dan penuh.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fbe3e3" fill-opacity="1" d="M0,256L48,213.3C96,171,
+        192,85,288,58.7C384,32,480,64,576,106.7C672,149,768,203,864,229.3C960,256,1056,256,1152,234.7C1248,213,1344,171,1392,
+        149.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288
+        ,320C192,320,96,320,48,320L0,320Z"></path></svg>
+    </section>
+    <!-- Akhir Portfolio -->
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col">
+            <h2 class="fw-bold mb-4">Kontak</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center mb-3">
+          <div class="col-md-6">
+            <!-- <h4>Email</h4> -->
+            <div class="row">
+              <div class="col-md-6">
+                  <!-- <h4>Get in Touch</h4> -->
+                  <p>Jika Anda memiliki pertanyaan atau membutuhkan informasi lebih lanjut, jangan ragu untuk menghubungi kami melalui metode berikut:</p>
+                  <ul class="list-unstyled">
+                      <li><strong>Whatsapp:</strong> <a href="tel:+6289515751943">0895-1575-1943</a></li>
+                      <li><strong>Email:</strong> <a href="mailto:jesicanailbeauty@gmail.com">jesicanailbeauty@gmail.com</a></li>
+                      <li><strong>Alamat:</strong> Jl. Perkutut I, RT.001/RW.006, Neglasari, Kec. Neglasari, Kota Tangerang, Banten 15129</li>
+                  </ul>
+              </div>
+              <div class="col-md-6 mb-3">
+                <h5>Lokasi Kami</h5>
+                <div id="map-container" style="height: 300px;">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1983.364914001212!2d106.62666766505788!3d-6.151111282186868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a1c2a0a50f457%3A0xb081ed7c8fe5a6b4!2sJl.%20Perkutut%20I%2C%20Neglasari%2C%20Kota%20Tangerang%2C%20Banten!5e0!3m2!1sid!2sid!4v1692858028965!5m2!1sid!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+              </div>
+              <!-- <div class="col-md-6">
+                  <h4>Send Us a Message</h4>
+                  <form>
+                      <div class="mb-3">
+                          <label for="name" class="form-label">Nama</label>
+                          <input type="text" class="form-control" id="name" placeholder="Nama Lengkap">
+                      </div>
+                      <div class="mb-3">
+                          <label for="email" class="form-label">Email</label>
+                          <input type="email" class="form-control" id="email" placeholder="Email">
+                      </div>
+                      <div class="mb-3">
+                          <label for="pesan" class="form-label">Pesan</label>
+                          <textarea class="form-control" id="message" rows="4" placeholder="Pesan Anda"></textarea>
+                      </div>
+                      <button type="submit" class="btn btn-custom" id="kirimkewa">Send Message</button>
+                  </form>
+              </div> -->
+          </div>
+            <!-- <form>
+              <div class="mb-3">
+                <label for="name" class="form-label">Nama Lengkap</label>
+                <input type="text" class="form-control" id="name" aria-describedby="name">
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">email</label>
+                <input type="email" class="form-control" id="email" aria-describedby="email">
+              </div>
+              <div class="mb-3">
+                <label for="pesan" class="form-label">Pesan</label>
+                <textarea class="form-control" id="pesan" rows="3"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Kirim</button>
+            </form> -->
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f2627a" fill-opacity="1" d="M0,96L26.7,122.7C53.3,149,107,203,160,218.7C213.3,235,267,213,320,197.3C373.3,181,427,171,480,149.3C533.3,128,587,96,640,90.7C693.3,85,747,107,800,144C853.3,181,907,235,960,218.7C1013.3,203,1067,117,1120,101.3C1173.3,85,1227,139,1280,144C1333.3,149,1387,107,1413,85.3L1440,64L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,
+        320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path></svg>
+    </section>
+    <!-- Akhir Contact -->
+    <footer class="navbar-custom text-white text-center pb-5">
+      <p>Created with <span style="color: red;">❤️</span> by <a href="https://www.instagram.com/trhenaldy/" class="text-white fw-bold">Thendy Rhenaldy</a></p>
+      <!-- <p>Created with love by <a href="https://www.instagram.com/trhenaldy/" class="text-white fw-bold">Thendy Rhenaldy</a></p> -->
+    </footer>
+    <!-- Footer -->
+
+    <!-- Akhir Footer -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

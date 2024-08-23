@@ -1,0 +1,47 @@
+.navbar-custom{
+    background-color: #f2627a;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.jumbotron {
+    padding-top: 6rem;
+    /* background-color: #e2edff; */
+    background-color: #fbe3e3;
+}
+
+#projects {
+    /* background-color: #e2edff; */
+    background-color: #fbe3e3;
+}
+
+#contact {
+    /* background-color: #e2edff; */
+    background-color: #fbe3e3;
+}
+
+
+section {
+    padding-top: 5rem;
+}
+
+.nav-link.active,
+.nav-link:focus,
+.nav-link:hover {
+    color: #ff69b4; /* Warna pink atau sesuaikan dengan warna menyala yang Anda inginkan */
+    text-shadow: 0 0 8px rgba(255, 105, 180, 0.8); /* Efek menyala */
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.btn-custom {
+    background-color: #f2627a; /* Warna latar belakang */
+    border-color: #f2627a; /* Warna border */
+    color: white; /* Warna teks */
+}
+
+.btn-custom:hover {
+    background-color: #e54b6f; /* Warna latar belakang saat hover */
+    border-color: #e54b6f; /* Warna border saat hover */
+}
