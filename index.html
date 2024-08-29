@@ -323,10 +323,54 @@
                 <p class="card-text text-justify">Tampil lebih percaya diri dengan alis yang sempurna melalui layanan Sulam Alis di Jesica Beauty Studio. 
                   Proses sulam alis kami dirancang untuk menciptakan bentuk alis yang indah dan natural, disesuaikan dengan struktur wajah Anda. 
                   Menggunakan teknik terkini dan bahan berkualitas, kami menjamin hasil yang tahan lama dengan tampilan yang halus dan rapi.</p>
-                  <a href="#" class="btn btn-primary">Book Now!</a>
+                  
+                  <!-- <a href="#" class="btn btn-primary">Book Now!</a> -->
+                  <!-- Form Booking -->
+                <form id="bookingFormSulamAlis">
+                  <div class="mb-3">
+                    <label for="dateSulamAlis" class="form-label">Pilih Tanggal</label>
+                    <input type="date" class="form-control" id="dateSulamAlis" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="nameSulamAlis" class="form-label">Nama Lengkap</label>
+                    <input type="text" class="form-control" id="nameSulamAlis" placeholder="Nama Anda" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="phoneSulamAlis" class="form-label">Nomor WhatsApp</label>
+                    <input type="text" class="form-control" id="phoneSulamAlis" placeholder="Nomor WhatsApp Anda" required>
+                  </div>
+                  <button type="button" class="btn btn-primary" onclick="sendBookingSulamAlis()">Book Now!</button>
+                </form>
+                <!-- akhir form booking Sulam Alis -->
               </div>
             </div>
           </div>
+          <script>
+            function sendBookingSulamAlis() {
+              // Mengambil data dari form
+              var name = document.getElementById("nameSulamAlis").value;
+              var phone = document.getElementById("phoneSulamAlis").value;
+              var date = document.getElementById("dateSulamAlis").value;
+          
+              // Cek apakah semua data sudah diisi
+              if (name && phone && date) {
+                // Format pesan WhatsApp
+                var message = "Halo, saya " + name + 
+                              ". Saya ingin booking layanan Sulam Alis di Jesica Beauty Studio pada tanggal " + date + 
+                              ". Nomor kontak saya: " + phone;
+          
+                // Encode pesan menjadi URL
+                var whatsappURL = "https://wa.me/6289515751943?text=" + encodeURIComponent(message);
+          
+                // Redirect ke WhatsApp
+                window.open(whatsappURL, "_blank");
+              } else {
+                alert("Mohon lengkapi semua data sebelum melakukan booking.");
+              }
+            }
+          </script>
+
+          <!-- SULAM BIBIR BOOKING -->
           <div class="col-md-4 mb-3">
             <div class="card">
               <img src="img/Sulambibir.jpg" class="card-img-top" alt="Projects 5">
@@ -336,10 +380,52 @@
                   Prosedur ini dirancang untuk memberikan warna yang natural dan tahan lama, sehingga Anda bisa tampil cantik tanpa perlu 
                   menggunakan lipstik setiap hari. Dengan teknik sulam yang presisi dan aman, warna bibir Anda akan terlihat lebih hidup, 
                   simetris, dan penuh.</p>
-                  <a href="#" class="btn btn-primary">Book Now!</a>
+
+                  <!-- <a href="#" class="btn btn-primary">Book Now!</a> -->
+                  <!-- Form Booking -->
+                <form id="bookingFormSulamBibir">
+                  <div class="mb-3">
+                    <label for="dateSulamBibir" class="form-label">Pilih Tanggal</label>
+                    <input type="date" class="form-control" id="dateSulamBibir" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="nameSulamBibir" class="form-label">Nama Lengkap</label>
+                    <input type="text" class="form-control" id="nameSulamBibir" placeholder="Nama Anda" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="phoneSulamBibir" class="form-label">Nomor WhatsApp</label>
+                    <input type="text" class="form-control" id="phoneSulamBibir" placeholder="Nomor WhatsApp Anda" required>
+                  </div>
+                  <button type="button" class="btn btn-primary" onclick="sendBookingSulamBibir()">Book Now!</button>
+                </form>
+                <!-- akhir form booking Sulam Bibir -->
               </div>
             </div>
           </div>
+          <script>
+            function sendBookingSulamBibir() {
+              // Mengambil data dari form
+              var name = document.getElementById("nameSulamBibir").value;
+              var phone = document.getElementById("phoneSulamBibir").value;
+              var date = document.getElementById("dateSulamBibir").value;
+          
+              // Cek apakah semua data sudah diisi
+              if (name && phone && date) {
+                // Format pesan WhatsApp
+                var message = "Halo, saya " + name + 
+                              ". Saya ingin booking layanan Sulam Bibir di Jesica Beauty Studio pada tanggal " + date + 
+                              ". Nomor kontak saya: " + phone;
+          
+                // Encode pesan menjadi URL
+                var whatsappURL = "https://wa.me/6289515751943?text=" + encodeURIComponent(message);
+          
+                // Redirect ke WhatsApp
+                window.open(whatsappURL, "_blank");
+              } else {
+                alert("Mohon lengkapi semua data sebelum melakukan booking.");
+              }
+            }
+          </script>
         </div>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,288L26.7,261.3C53.3,235,107,181,160,138.7C213.3,96,267,64,320,42.7C373.3,21,427,11,480,37.3C533.3,64,587,128,640,138.7C693.3,149,747,107,800,96C853.3,85,907,107,960,101.3C1013.3,96,1067,64,1120,74.7C1173.3,85,1227,139,1280,160C1333.3,181,1387,171,1413,165.3L1440,160L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,
