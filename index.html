@@ -142,6 +142,7 @@
           </div>
         </div>
         <div class="row justify-content-center">
+          <!-- NAIL ART BOOKING -->
           <div class="col-md-4 mb-3">
             <div class="card">
               <img src="img/Nailart.jpg" class="card-img-top" alt="Projects 1">
@@ -170,6 +171,7 @@
                   </div>
                   <button type="button" class="btn btn-primary" onclick="sendBookingNailArt()">Book Now!</button>
                 </form>
+                <!-- akhir form booking Nail Art -->
               </div>
             </div>
           </div>
@@ -197,7 +199,8 @@
               }
             }
           </script>
-          
+
+          <!-- EYELASH BOOKING -->
           <div class="col-md-4 mb-3">
             <div class="card">
               <img src="img/Eyelash.jpg" class="card-img-top" alt="Projects 2">
@@ -206,10 +209,54 @@
                 <p class="card-text text-justify">Ingin memiliki bulu mata yang panjang, tebal, dan alami? Layanan Eyelash di Jesica Beauty Studio 
                   hadir untuk memberikan hasil yang sempurna sesuai dengan keinginan Anda. Dengan teknik aplikasi yang presisi dan 
                   produk berkualitas tinggi, kami memastikan bahwa bulu mata Anda akan terlihat indah dan tetap nyaman.</p>
-                  <a href="#" class="btn btn-primary">Book Now!</a>
+
+                  <!-- <a href="#" class="btn btn-primary">Book Now!</a> -->
+                <!-- Form Booking -->
+                <form id="bookingFormEyelash">
+                  <div class="mb-3">
+                    <label for="dateEyelash" class="form-label">Pilih Tanggal</label>
+                    <input type="date" class="form-control" id="dateEyelash" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="nameEyelash" class="form-label">Nama Lengkap</label>
+                    <input type="text" class="form-control" id="nameEyelash" placeholder="Nama Anda" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="phoneEyelash" class="form-label">Nomor WhatsApp</label>
+                    <input type="text" class="form-control" id="phoneEyelash" placeholder="Nomor WhatsApp Anda" required>
+                  </div>
+                  <button type="button" class="btn btn-primary" onclick="sendBookingEyelash()">Book Now!</button>
+                </form>
+                <!-- akhir form booking Eyelash -->
               </div>
             </div>
           </div>
+          <script>
+            function sendBookingEyelash() {
+              // Mengambil data dari form
+              var name = document.getElementById("nameEyelash").value;
+              var phone = document.getElementById("phoneEyelash").value;
+              var date = document.getElementById("dateEyelash").value;
+          
+              // Cek apakah semua data sudah diisi
+              if (name && phone && date) {
+                // Format pesan WhatsApp
+                var message = "Halo, saya " + name + 
+                              ". Saya ingin booking layanan Eyelash di Jesica Beauty Studio pada tanggal " + date + 
+                              ". Nomor kontak saya: " + phone;
+          
+                // Encode pesan menjadi URL
+                var whatsappURL = "https://wa.me/6289515751943?text=" + encodeURIComponent(message);
+          
+                // Redirect ke WhatsApp
+                window.open(whatsappURL, "_blank");
+              } else {
+                alert("Mohon lengkapi semua data sebelum melakukan booking.");
+              }
+            }
+          </script>
+
+          <!-- INFUS WHITENING BOOKING -->
           <div class="col-md-4 mb-3">
             <div class="card">
               <img src="img/Infuswhitening.jpg" class="card-img-top" alt="Projects 3">
