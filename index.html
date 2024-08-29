@@ -151,10 +151,53 @@
                   Layanan Nail Art kami dirancang untuk memberikan sentuhan seni pada kuku Anda, menciptakan tampilan yang unik dan penuh 
                   gaya sesuai dengan kepribadian Anda. Mulai dari desain minimalis hingga pola yang lebih rumit, tim profesional kami siap 
                   untuk mewujudkan imajinasi Anda menjadi kenyataan.</p>
-                  <a href="#" class="btn btn-primary">Book Now!</a>
+                  
+                  <!-- <a href="#" class="btn btn-primary">Book Now!</a> -->
+
+                <!-- Form Booking -->
+                <form id="bookingFormNailArt">
+                  <div class="mb-3">
+                    <label for="dateNailArt" class="form-label">Pilih Tanggal</label>
+                    <input type="date" class="form-control" id="dateNailArt" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="nameNailArt" class="form-label">Nama Lengkap</label>
+                    <input type="text" class="form-control" id="nameNailArt" placeholder="Nama Anda" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="phoneNailArt" class="form-label">Nomor WhatsApp</label>
+                    <input type="text" class="form-control" id="phoneNailArt" placeholder="Nomor WhatsApp Anda" required>
+                  </div>
+                  <button type="button" class="btn btn-primary" onclick="sendBookingNailArt()">Book Now!</button>
+                </form>
               </div>
             </div>
           </div>
+          <script>
+            function sendBookingNailArt() {
+              // Mengambil data dari form
+              var name = document.getElementById("nameNailArt").value;
+              var phone = document.getElementById("phoneNailArt").value;
+              var date = document.getElementById("dateNailArt").value;
+          
+              // Cek apakah semua data sudah diisi
+              if (name && phone && date) {
+                // Format pesan WhatsApp
+                var message = "Halo, saya " + name + 
+                              ". Saya ingin booking layanan Nail Art di Jesica Beauty Studio pada tanggal " + date + 
+                              ". Nomor kontak saya: " + phone;
+          
+                // Encode pesan menjadi URL
+                var whatsappURL = "https://wa.me/6289515751943?text=" + encodeURIComponent(message);
+          
+                // Redirect ke WhatsApp
+                window.open(whatsappURL, "_blank");
+              } else {
+                alert("Mohon lengkapi semua data sebelum melakukan booking.");
+              }
+            }
+          </script>
+          
           <div class="col-md-4 mb-3">
             <div class="card">
               <img src="img/Eyelash.jpg" class="card-img-top" alt="Projects 2">
