@@ -266,10 +266,55 @@
                   Perawatan ini dirancang untuk mencerahkan kulit secara menyeluruh, memberikan hasil yang lebih cepat dan 
                   merata dibandingkan metode tradisional. Infus Whitening bekerja dengan menutrisi kulit dari dalam, membantu 
                   mengurangi hiperpigmentasi, dan meningkatkan elastisitas kulit.</p>
-                  <a href="#" class="btn btn-primary">Book Now!</a>
+
+                  <!-- <a href="#" class="btn btn-primary">Book Now!</a> -->
+
+                  <!-- Form Booking -->
+                <form id="bookingFormInfusWhitening">
+                  <div class="mb-3">
+                    <label for="dateInfusWhitening" class="form-label">Pilih Tanggal</label>
+                    <input type="date" class="form-control" id="dateInfusWhitening" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="nameInfusWhitening" class="form-label">Nama Lengkap</label>
+                    <input type="text" class="form-control" id="nameInfusWhitening" placeholder="Nama Anda" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="phoneInfusWhitening" class="form-label">Nomor WhatsApp</label>
+                    <input type="text" class="form-control" id="phoneInfusWhitening" placeholder="Nomor WhatsApp Anda" required>
+                  </div>
+                  <button type="button" class="btn btn-primary" onclick="sendBookingInfusWhitening()">Book Now!</button>
+                </form>
+                <!-- akhir form booking infus whitening -->
               </div>
             </div>
           </div>
+          <script>
+            function sendBookingInfusWhitening() {
+              // Mengambil data dari form
+              var name = document.getElementById("nameInfusWhitening").value;
+              var phone = document.getElementById("phoneInfusWhitening").value;
+              var date = document.getElementById("dateInfusWhitening").value;
+          
+              // Cek apakah semua data sudah diisi
+              if (name && phone && date) {
+                // Format pesan WhatsApp
+                var message = "Halo, saya " + name + 
+                              ". Saya ingin booking layanan Infus Whitening di Jesica Beauty Studio pada tanggal " + date + 
+                              ". Nomor kontak saya: " + phone;
+          
+                // Encode pesan menjadi URL
+                var whatsappURL = "https://wa.me/6289515751943?text=" + encodeURIComponent(message);
+          
+                // Redirect ke WhatsApp
+                window.open(whatsappURL, "_blank");
+              } else {
+                alert("Mohon lengkapi semua data sebelum melakukan booking.");
+              }
+            }
+          </script>
+
+          <!-- SULAM ALIS BOOKING -->
           <div class="col-md-4 mb-3">
             <div class="card">
               <img src="img/Sulamalis.jpg" class="card-img-top" alt="Projects 4">
